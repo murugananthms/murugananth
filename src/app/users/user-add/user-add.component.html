@@ -1,0 +1,28 @@
+<p>user-add works!</p>
+
+ <div class="form-container">
+  <h2>Add User</h2>
+  <form
+   [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>Name:</label>
+    <input type="text" formControlName="name" />
+    <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+      Name is required.
+    </div>
+
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+    <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+      Enter a valid email.
+    </div>
+
+    <label>Phone:</label>
+    <input type="text" formControlName="phone" />
+    <div *ngIf="userForm.get('phone')?.invalid && userForm.get('phone')?.touched">
+      Phone is required.
+    </div>
+
+    <button type="submit" >Add User</button>
+  </form>
+</div>
+
