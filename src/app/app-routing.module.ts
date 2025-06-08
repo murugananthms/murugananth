@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
    {
@@ -14,7 +17,11 @@ const routes: Routes = [
       import('./admin/admin.module').then(m => m.AdminModule)
   },
 
-  { path: '', redirectTo: '/users', pathMatch: 'full' } 
+  // { path: '', redirectTo: '/users', pathMatch: 'full' } 
+   { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'header', component: HeaderComponent },
+ 
 ];
 
 @NgModule({

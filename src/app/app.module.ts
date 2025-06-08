@@ -8,10 +8,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './admin/admin.module';
 import { UsersModule } from './users/users.module';
+import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
+    HeaderComponent,
+    AboutComponent,
+    HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -19,7 +26,7 @@ import { UsersModule } from './users/users.module';
     ReactiveFormsModule,
     HttpClientModule,
     AdminModule,
-    UsersModule
+    UsersModule,
     
   ],
   providers: [],

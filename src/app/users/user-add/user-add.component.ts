@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-user-add',
   templateUrl: './user-add.component.html',
-  styleUrls: ['./user-add.component.css']
+  // styleUrls: ['./user-add.component.css']
 })
 export class UserAddComponent {
   userForm: FormGroup;
